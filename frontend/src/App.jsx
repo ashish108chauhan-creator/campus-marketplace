@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import AdminDashboard from "./pages/AdminDashboard";
 
-const API = "http://localhost:8080/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
 
 function App() {
   const [products, setProducts] = useState([]);
